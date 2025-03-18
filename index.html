@@ -8,50 +8,53 @@
 <body>
 
     <header>
-        <h1>Welcome to Our Multimedia Page</h1>
+        <h1>Welcome to Our Assignment Page</h1>
     </header>
-
-    <section>
-        <h2>Audio Player</h2>
-        <audio controls>
-            <source src="https://audionautix.com/Music/OkeyDokeySmokey.mp3" type="audio/mp3">
-            Your browser does not support the audio element.
-        </audio>
-
-        <h2>Video Player</h2>
-        <video width="320" height="240" controls>
-            <source src="https://videos.pexels.com/video-files/29570837/12728656_640_360_30fps.mp4" type="video/mp4">
-            Your browser does not support the video element.
-        </video>
-    </section>
 
     <section>
         <h2>Embedded Image</h2>
         <img src="https://images.pexels.com/photos/31181927/pexels-photo-31181927/free-photo-of-charming-rainy-tokyo-laneway-with-greenery.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Sample Image" width="300">
-
-        <h2>Sample Table</h2>
-        <table>
-            <tr>
-                <th>Name</th>
-                <th>Age</th>
-                <th>City</th>
-            </tr>
-            <tr>
-                <td>Alice</td>
-                <td>30</td>
-                <td>New York</td>
-            </tr>
-            <tr>
-                <td>Bob</td>
-                <td>25</td>
-                <td>Los Angeles</td>
-            </tr>
-            <tr>
-                <td>Charlie</td>
-                <td>35</td>
-                <td>Chicago</td>
-            </tr>
-        </table>
+        <section>
+            <h2>Contact Table</h2>
+            <table border="1">
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Mobile</th>
+                    <th>Email</th>
+                </tr>
+                <tr>
+                    <td>John agolo</td>
+                    <td>123 Main St, Springfield</td>
+                    <td>123-456-7890</td>
+                    <td>john.doe@example.com</td>
+                </tr>
+                <tr>
+                    <td>Jane wamele</td>
+                    <td>456 Elm St, Gataka</td>
+                    <td>987-654-3210</td>
+                    <td>jane.smith@example.com</td>
+                </tr>
+                <tr>
+                    <td>Mark Johnson</td>
+                    <td>789 Oak St, Johannes burg</td>
+                    <td>555-123-4567</td>
+                    <td>mark.johnson@example.com</td>
+                </tr>
+                <tr>
+                    <td>Lucy Ifeoluwa</td>
+                    <td>101 Pine St, Nairobi</td>
+                    <td>444-567-8901</td>
+                    <td>lucy.brown@example.com</td>
+                </tr>
+                <tr>
+                    <td>David Wilson</td>
+                    <td>202 Maple St, Whindoek</td>
+                    <td>222-333-4444</td>
+                    <td>david.wilson@example.com</td>
+                </tr>
+            </table>
+        </section>
 
         <h2>Sample Lists</h2>
         <h3>Ordered List </h3>
@@ -71,17 +74,53 @@
 
     <section>
         <h2>Registration Form</h2>
-        <form id="registrationForm" method="post">
-            <label for="fullname">Full Name:</label>
-            <input type="text" id="fullname" name="fullname" required placeholder="Enter your full name">
-            
+        <form action="submit_registration.php" method="post" id="registrationForm">
+
+            <!-- Name Field -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+
+            <!-- Email Field -->
             <label for="email">Email:</label>
-            <input type="email" id="email" name="email" required placeholder="Enter your email">
-            
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <!-- Password Field -->
             <label for="password">Password:</label>
-            <input type="password" id="password" name="password" required minlength="6" placeholder="Enter your password">
-            
+            <input type="password" id="password" name="password" placeholder="Enter your password" required minlength="6">
+
+            <!-- Date of Birth Field -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob" required>
+
+            <!-- Gender (Radio Buttons) -->
+            <fieldset>
+                <legend>Gender:</legend>
+                <label for="male">Male</label>
+                <input type="radio" id="male" name="gender" value="male" required>
+                
+                <label for="female">Female</label>
+                <input type="radio" id="female" name="gender" value="female" required>
+                
+                <label for="other">Other</label>
+                <input type="radio" id="other" name="gender" value="other" required>
+            </fieldset>
+
+            <!-- Newsletter Subscription (Checkbox) -->
+            <label for="newsletter">Subscribe to our newsletter:</label>
+            <input type="checkbox" id="newsletter" name="newsletter">
+
+            <label for="country">Country:</label>
+            <select id="country" name="country" required>
+                <option value="">Select a country</option>
+                <option value="USA">United States</option>
+                <option value="Canada">Canada</option>
+                <option value="UK">United Kingdom</option>
+                <option value="Australia">Australia</option>
+            </select>
+
+            <!-- Submit Button -->
             <input type="submit" value="Register">
+
         </form>
     </section>
 
